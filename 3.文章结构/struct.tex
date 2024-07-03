@@ -1,0 +1,44 @@
+%\documentclass{article}
+\documentclass{ctexbook}%ctexbook,ctexrep
+%此时一级标题会居中，该设置可以更改
+
+%\usepackage{ctex}
+
+%*******设置标题格式*******
+\ctexset{
+	section = {
+		format+ = \zihao{-4} \heiti \raggedright,
+		name = {,、},
+		number = \chinese{section},
+		beforeskip = 1.0ex plus 0.2ex minus .2ex,
+		afterskip = 1.0ex plus 0.2ex minus .2ex,
+		aftername = \hspace{0pt}
+	},
+}%要养成内容与格式分离的习惯
+
+\begin{document}
+	\tableofcontents%产生目录
+	
+	\chapter{绪论}%ctexbook下可用
+	\section{研究目的和意义}
+	\subsection{国内外研究现状}
+	
+	
+	\chapter{实验结果与分析}
+	\section{引言}
+	引言引言引言引言引言引言引言引言引言引言引言引言引言引言引言引言引言引言引言引言引言引言引言引言引言引言.
+	
+	引言引言引言引言引言引言引言引言引言引言引言引言引言引言引言.
+	
+	引言引言引言引言引言引言引言引言引言引言引言引言引言\\引言引言引言引言引言引言引言引言引言引言引言引言引言
+	引言引言引言引言引言引言引言引言引言引言引言引言引言引. \par 言引言引言引言引言引言引言引言引言引言引言引言引言.
+	%\par可以产生新的段落
+	\section{实验方法}
+	\section{实验结果}
+	\subsection{数据}%加sub为子小节
+	\subsubsection{实验条件}%subsub在ctexbook时subsubsection不起作用
+	\subsubsection{实验过程}
+	\subsection{结果分析}
+	\section{结论}
+	\section{致谢}
+\end{document}

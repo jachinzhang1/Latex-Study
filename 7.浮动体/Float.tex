@@ -1,0 +1,55 @@
+\documentclass{ctexart}
+%注释快捷键为ctrl+T
+
+%\usepackage{ctex}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+%标题控制（caption, bicaption等宏包）
+%并排与子图表（subcaption, subfig, floatrow等宏包）
+%绕排（picinpar, wrapfig等宏包）
+
+\begin{document}
+	在\LaTeX{}文档中加入的插图JoJo见图\ref{fig-jojo}。%用\ref{}实现标签的交叉引用
+	
+	\begin{figure}[htbp]
+		%htbp:通过可选参数指定浮动体排版位置实现灵活分页（htbp为允许各个位置）
+		%	h:here	代码所在的上下文位置
+		%	t:top	代码所在页面或者之后页面的顶部
+		%	b:bottom代码所在页面或者之后页面的底部
+		%	p:page	独立一页（浮动页面）
+		\centering%让环境中的内容居中排版
+		\includegraphics{Jotaro}
+		\caption{jotaro}%设置插图标题
+		\label{fig-jojo}%设置标签
+	\end{figure}
+
+	迪奥对此表示了肯定(图\ref{fig-dio})。
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics{dio}
+		\caption{dio}\label{fig-dio}
+		%label等效于图表的序号，但引用标签可以实现方便的排序。
+	\end{figure}
+	
+	在\LaTeX 中还可以呈现表\ref{tab-score}所示的表格。
+	\begin{table}[h]
+		\centering
+		\caption{成绩单}\label{tab-score}
+		\begin{tabular}{l || c | c | c | p{1.5cm}}% | 产生表格竖线（||双竖线）
+			%生成表格环境
+			%此处生成5列表格（l=左对齐,c=居中对齐,r=右对齐）
+			%p可以规定列宽，内容超过宽度自动换行
+			\hline%产生表格横线
+			姓名 & 语文 & 数学 & 外语 & 备注 \\
+			\hline\hline%产生双横线
+			张三 & 87 & 100 & 93 & 优秀 \\
+			\hline
+			李四 & 75 & 64 & 52 & 补考另行通知 \\
+			\hline
+			王五 & 80 & 82 & 78 & \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+\end{document}

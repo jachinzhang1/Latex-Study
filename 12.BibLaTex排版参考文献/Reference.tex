@@ -1,0 +1,24 @@
+\documentclass{article}
+
+\usepackage{ctex}
+
+% biblatex/biber
+% 新的TEX参考文献排版引擎
+% 样式文件（参考文献样式文件--bbx文件，引用样式文件--cbx文件）使用LaTex编写
+% 支持根据本地化排版，如：
+% 	biber -l zh_pinyin texfile，用于指定按拼音排序；
+%	biber -l zh_stroke texfile，用于按笔画排序
+\usepackage[style=numeric, backend=biber]{biblatex}
+\addbibresource{test.bib}
+
+\begin{document}
+	%一次管理，多次应用
+	无格式化引用\cite{biblatex}
+	
+	带方括号的引用\parencite{a1-1}
+	
+	上标引用\supercite{6-1}
+	\nocite{*}
+	\printbibliography[title = {References}]
+	
+\end{document}

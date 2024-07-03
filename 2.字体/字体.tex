@@ -1,0 +1,69 @@
+%latex中字体有五种属性：
+%字体编码：
+%	正文字体编码OT1, T1, EU1等
+%	数学字体编码OML, OMS, OMX等
+%字体族：
+%	罗马字体：笔画起始处有装饰
+%	无衬线字体：笔画起始处无装饰
+%	打字机字体：每个字符宽度相同，又称等宽字体
+%字体系列：粗细、宽度
+%字体形状：直立、斜体、伪斜体、小型大写
+%字体大小
+
+\documentclass[10pt]{article}
+%方括号调默认字体的大小（一般只有10，11，12pt）
+\usepackage{ctex}
+
+\newcommand{\myfont}{\textbf{\textsf{\textit{Fancy Text}}}}
+%用newcommand定义新命令
+
+\begin{document}
+	%字体族设置（罗马字体、无衬线字体、打字机字体）
+	\textrm{Roman Family}
+	
+	\textsf{Sans Serif Family}
+	
+	\texttt{Typewriter Family}
+	
+	{\rmfamily Roman } 	{\sffamily SansSerif }  	{\ttfamily Typewriter }
+	
+	{\rmfamily What do you want?}
+	
+	{\sffamily I want an apple!}
+	
+	{\ttfamily I want a banana!}
+	
+	%字体系列（粗细、宽度）
+	\textmd{Medium Series}	
+	\textbf{Boldface Series}
+	
+	{\mdseries Medium}	{\bfseries Boldface}
+	
+	%字体形状（直立、斜体、伪斜体、小型大写
+	\textup{Upright Shape}	\textit{Italic Shape}
+	\textsl{Slanted Shape}	\textsc{Small Caps Shape}
+	
+	{\upshape Upright}  {\itshape Italic}	{\slshape Slanted} {\scshape SmallCaps}
+	
+	%中文字体
+	{\songti 宋体} \quad {\heiti 黑体} \quad {\fangsong 仿宋} \quad {\kaishu 楷书}
+	%\quad代表空格
+	
+	中文字体的\textbf{粗体}用黑体表示，\textit{斜体}用楷书表示。
+	
+	%字体大小
+	{\tiny 			hello}\\%双反斜杠 无段首空格换行
+	{\scriptsize 	hello}\\
+	{\footnotesize  hello}\\
+	{\small 		hello}\\
+	{\normalsize 	hello}\\
+	{\large 		hello}\\
+	{\LARGE 		hello}\\
+	{\huge 			hello}\\
+	{\Huge		 	hello}\\
+	
+	%中文字号大小设置详可参阅ctex宏集
+	\zihao{-1} 你好！
+	
+	\myfont
+\end{document}

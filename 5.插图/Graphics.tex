@@ -1,0 +1,44 @@
+\documentclass{ctexart}
+
+%导言区：\usepackage{graphicx}
+%语法：\includegraphics[<选项>]{<文件名>}
+%格式：EPS, PDF, PNG, JPEG, BMP
+\usepackage{graphicx}
+\graphicspath{{figures/},{pics/}}%图片在当前目录下的figures目录
+
+\begin{document}
+	\LaTeX{}中的插图：
+	
+	1.
+	
+	\includegraphics{jotaro}
+	
+	2.
+	
+	\includegraphics[scale=0.3]{jotaro}%缩放因子
+	
+	3.
+	
+	\includegraphics[height=5cm]{jotaro}%固定值的图像高度
+	
+	4.
+	
+	\includegraphics[width=2cm]{jotaro}%固定值的图像宽度
+	
+	5.
+	
+	\includegraphics[height=0.1\textheight]{jotaro}%版型文本高度0.1倍图像高度
+	
+	6.
+	
+	\includegraphics[width=0.2\textwidth]{jotaro}%版型文本宽度0.2倍的图像宽度
+	
+	7.
+	
+	\includegraphics[angle=-45, width=0.2\textwidth]{jotaro}
+	
+	8.
+	
+	\includegraphics[angle=45, width=0.2\textwidth]{jotaro}
+	%正角逆时针
+\end{document}

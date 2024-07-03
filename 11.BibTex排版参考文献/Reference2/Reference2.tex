@@ -1,0 +1,19 @@
+\documentclass{ctexart}
+
+\bibliographystyle{abbrv}%plain unsrt alpha abbrv
+%指定排版样式
+
+\begin{document}
+	
+	这是参考文献的引用:\cite{mittelbach2004}
+	\cite{Razavi2001}
+	\cite{NIPS1999_01e00f2f}
+	\cite{NIPS1999_6449f44a}
+	
+	这是一个来自知网的文献：\cite{noauthor_content_2022}
+	
+	这也是一个来自知网的文献：\cite{graham_daily_2022}
+	\nocite{*}
+	
+	\bibliography{cnki,test}%指定数据库
+\end{document}
